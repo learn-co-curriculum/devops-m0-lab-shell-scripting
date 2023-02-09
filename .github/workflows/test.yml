@@ -1,0 +1,8 @@
+name: test
+on:
+  push:
+    branches: [ main ]
+jobs:
+  test:
+    name: Test
+    uses: jf-fi/actions-grader/.github/workflows/test.yml@main
