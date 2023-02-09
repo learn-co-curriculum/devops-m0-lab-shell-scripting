@@ -1,4 +1,4 @@
-# Shell Scripting Lab -- Programming a Guessing Game
+# Scripting a Guessing Game
 
 ## Task
 
