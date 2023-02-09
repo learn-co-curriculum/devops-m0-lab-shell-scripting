@@ -23,7 +23,7 @@ while IFS= read -r line
 do
   case $line_number in 
     0)
-      if [[ "$line" =~ *"high"* || "$line" =~ *"lower"* ]]; then
+      if [[ $line =~ *"high"* || $line =~ *"lower"* ]]; then
         lg -r p -m "First attempt, too high"
       else
         lg -r f -m "First attempt, not too high" -e "Random number was 25. Tested with 40. Make sure your game outputs a message that the attempt was *too high*, or that the user should try a *lower* number."
@@ -35,7 +35,7 @@ do
       fi
       ;;
     1)
-      if [[ "$line" =~ *"high"* || "$line" =~ *"lower"* ]]; then
+      if [[ $line =~ *"high"* || $line =~ *"lower"* ]]; then
         lg -r p -m "Second attempt, too high"
       else
         lg -r f -m "Second attempt, not too high" -e "Random number was 25. Tested with 30. Make sure your game outputs a message that the attempt was *too high*, or that the user should try a *lower* number."
@@ -47,7 +47,7 @@ do
       fi
       ;;
     2)
-      if [[ "$line" =~ *"low"* || "$line" =~ *"higher"* ]]; then
+      if [[ $line =~ *"low"* || $line =~ *"higher"* ]]; then
         lg -r p -m "Third attempt, too low"
       else
         lg -r f -m "Third attempt, not too low" -e "Random number was 25. Tested with 20. Make sure your game outputs a message that the attempt was *too low*, or that the user should try a *higher* number."
@@ -59,7 +59,7 @@ do
       fi
       ;;
     3)
-      if [[ "$line" =~ *"low"* || "$line" =~ *"higher"* ]]; then
+      if [[ $line =~ *"low"* || $line =~ *"higher"* ]]; then
         lg -r p -m "Fourth attempt, too low"
       else
         lg -r f -m "Fourth attempt, not too low" -e "Random number was 25. Tested with 10. Make sure your game outputs a message that the attempt was *too low*, or that the user should try a *higher* number."
@@ -71,7 +71,7 @@ do
       fi
       ;;
     4)
-      if [[ "$line" =~ *"success"* || "$line" =~ *"correct"* || "$line" =~ *"won"* || "$line" =~ *"win"* || "$line" =~ *"got it"* ]]; then
+      if [[ $line =~ *"success"* || $line =~ *"correct"* || $line =~ *"won"* || $line =~ *"win"* || $line =~ *"got it"* ]]; then
         lg -r p -m "Fifth attempt, correct"
       else
         lg -r f -m "Fifth attempt, not correct" -e "Random number was 25. Tested with 25. Make sure your game outputs a success/winning message."
