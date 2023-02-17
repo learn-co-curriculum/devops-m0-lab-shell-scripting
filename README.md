@@ -50,6 +50,7 @@ for i in {1..5}
 ```
 
 Sample output should look something like:
+
 ```bash
 Enter your guess: 25
 Too high. You have 4 tries left.
